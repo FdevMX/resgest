@@ -1,0 +1,58 @@
+<?php
+// Incluir funciones
+require_once '../includes/functions.php';
+
+// Verificar si se recibió un ID de venta
+if (isset($_GET['id'])) {
+    $saleId = $_GET['id'];
+    
+    // Cargar ventas
+    $sales = loadJsonData('sales');
+    
+    // Buscar la venta solicitada
+    $saleDetails = null;
+    foreach ($sales as $sale) {
+        if ($sale['id'] == $saleId) {
+            $saleDetails = $sale;
+            break;
+        }
+    }
+    
+    // Si encontramos la venta, devolver los detalles en formato JSON
+    if ($saleDetails) {
+        // Asegurarse de que los items tengan el formato correcto
+        if (isset($saleDetails['items']) && is_array($saleDetails['items'])) {
+            foreach ($saleDetails['items'] as &$item) {
+                // Asegurarse de que los campos numéricos sean números
+                if (isset($item['quantity'])) {
+                    $item['quantity'] = intval($item['quantity']);
+                }
+                if (isset($item['price'])) {
+                    $item['price'] = floatval($item['price']);
+                }
+                
+                // Calcular el subtotal si no existe
+                if (!isset($item['subtotal']) && isset($item['quantity']) && isset($item['price'])) {
+                    $item['subtotal'] = $item['quantity'] * $item['price'];
+                }
+            }
+        }
+        
+        // Registrar la respuesta para depuración
+        error_log("API Response for Sale #$saleId: " . json_encode($saleDetails));
+        
+        // Devolver la respuesta
+        header('Content-Type: application/json');
+        echo json_encode($saleDetails);
+    } else {
+        // Si no se encuentra la venta, devolver un error
+        header('HTTP/1.1 404 Not Found');
+        echo json_encode(['error' => 'Venta no encontrada']);
+    }
+} else {
+    // Si no se proporcionó un ID, devolver un error
+    header('HTTP/1.1 400 Bad Request');
+    echo json_encode(['error' => 'ID de venta no proporcionado']);
+}
+?>
+

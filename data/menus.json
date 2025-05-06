@@ -1,0 +1,74 @@
+[
+    {
+        "id": "desayunos",
+        "name": "Desayunos",
+        "items": [
+            {
+                "name": "Huevos Rancheros",
+                "price": 85,
+                "image": "assets\/img\/menu\/Huevos-Rancheros.png",
+                "id": 1
+            },
+            {
+                "name": "Chilaquiles",
+                "price": 95,
+                "image": "assets\/img\/menu\/Chilaquiles.png",
+                "id": 2
+            },
+            {
+                "name": "Omelette",
+                "price": 85,
+                "image": "assets\/img\/menu\/Omelette.png",
+                "id": 3
+            }
+        ]
+    },
+    {
+        "id": "comidas",
+        "name": "Comidas",
+        "items": [
+            {
+                "name": "Enchiladas",
+                "price": 120,
+                "image": "assets\/img\/menu\/Enchiladas.png",
+                "id": 4
+            },
+            {
+                "name": "Chiles Rellenos",
+                "price": 140,
+                "image": "assets\/img\/menu\/Chiles-Rellenos.png",
+                "id": 5
+            },
+            {
+                "name": "Mole Poblano",
+                "price": 160,
+                "image": "assets\/img\/menu\/Mole-Poblano.png",
+                "id": 6
+            }
+        ]
+    },
+    {
+        "id": "cenas",
+        "name": "Cenas",
+        "items": [
+            {
+                "id": 7,
+                "name": "Tacos",
+                "price": 90,
+                "image": "assets\/img\/placeholder.jpg"
+            },
+            {
+                "id": 8,
+                "name": "Quesadillas",
+                "price": 85,
+                "image": "assets\/img\/placeholder.jpg"
+            },
+            {
+                "id": 9,
+                "name": "Sopa de Tortilla",
+                "price": 75,
+                "image": "assets\/img\/placeholder.jpg"
+            }
+        ]
+    }
+]

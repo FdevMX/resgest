@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin conexión - RestaurantApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .offline-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+        .icon-large {
+            font-size: 5rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="icon-large">
+            <i class="fas fa-wifi"></i>
+        </div>
+        <h1>Sin conexión</h1>
+        <p class="lead">No tienes conexión a internet en este momento.</p>
+        <p>Algunas funciones de la aplicación pueden estar disponibles en modo offline.</p>
+        <button class="btn btn-primary mt-3" onclick="window.location.reload()">
+            Intentar nuevamente
+        </button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
+

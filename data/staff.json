@@ -1,0 +1,62 @@
+[
+    {
+        "id": "meseros",
+        "name": "Meseros",
+        "staff": [
+            {
+                "name": "Carlos",
+                "apPaterno": "Rodríguez",
+                "apMaterno": "López",
+                "role": "Mesero",
+                "rfc": "ROLC901122ABC",
+                "id": 1
+            },
+            {
+                "id": 2,
+                "name": "María",
+                "apPaterno": "González",
+                "apMaterno": "Pérez",
+                "role": "Mesero",
+                "rfc": "GOPM850615XYZ"
+            },
+            {
+                "id": 3,
+                "name": "Juan",
+                "apPaterno": "Martínez",
+                "apMaterno": "Sánchez",
+                "role": "Mesero",
+                "rfc": "MASJ880304DEF"
+            }
+        ]
+    },
+    {
+        "id": "cocina",
+        "name": "Cocina",
+        "staff": [
+            {
+                "name": "Ana",
+                "apPaterno": "Hernández",
+                "apMaterno": "García",
+                "role": "Cocina",
+                "rfc": "HEGA790212GHI",
+                "id": 4
+            },
+            {
+                "id": 5,
+                "name": "Roberto",
+                "apPaterno": "López",
+                "apMaterno": "Torres",
+                "role": "Cocina",
+                "rfc": "LOTR830725JKL"
+            },
+            {
+                "id": 6,
+                "name": "Patricia",
+                "apPaterno": "Díaz",
+                "apMaterno": "Ramírez",
+                "role": "Cocina",
+                "rfc": "DIRP860418MNO"
+            }
+        ]
+    }
+]
